@@ -19,6 +19,6 @@ const router = express.Router()
     bookingController.createBookingCheckout,
     authController.protect,
     viewsController.getMyTours
-  );
+  )
 
 module.exports = router
