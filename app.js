@@ -15,6 +15,7 @@ const reviewRouter = require('./routes/reviewRoutes')
 const viewRouter = require('./routes/viewRoutes')
 const bookingRouter = require('./routes/bookingRoutes')
 const cookieParser = require('cookie-parser')
+const compression = require('compression')
 
 const app = express()
 
@@ -61,6 +62,8 @@ app.use(hpp({
     'price'
   ]
 }))
+
+app.use(compression())
 
 // Test middleware
 app.use((req, res, next) => {
